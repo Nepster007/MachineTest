@@ -1,5 +1,5 @@
 import "./App.css";
-import {BrowserRouter as Switch, Route } from "react-router-dom";
+import {BrowserRouter as Switch, Route, Routes } from "react-router-dom";
 import { Login } from "./components/Login";
 import { Home } from "./components/Home";
 import { User } from "./components/User";
@@ -10,6 +10,7 @@ import { ChangePassword } from "./components/ChangePassword";
 function App() {
   return (
     <>
+    <Routes>
       <NavMenu />
       <Route exact path="/" component={Login} />
       <div className="content">
@@ -19,7 +20,9 @@ function App() {
           <PrivateRouter path="/user" component={User} />
           <PrivateRouter path="/changepassword" component={ChangePassword} />
         </Switch>
+        
       </div>
+      </Routes>
     </>
   );
 }
