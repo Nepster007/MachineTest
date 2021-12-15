@@ -20,7 +20,7 @@ function App() {
           <PrivateRouter path="/user" component={User} />
           <PrivateRouter path="/changepassword" component={ChangePassword} />
         </Switch>
-        
+          
       </div>
       </Routes>
     </>
